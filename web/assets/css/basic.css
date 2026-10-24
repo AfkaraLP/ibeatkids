@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>gamerboy80</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/index.css">
+<link rel="shortcut icon" href="assets/img/80avatar.png" type="image/x-icon">
+<meta content="gamerboy80" property="og:title">
+<meta name="keywords" content="youtube, minecraft, gamerboy80, 80, hypixel, bedwars, texturepack">
+<meta name="robots" content="index">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="InspectorRex">
+<meta name="theme-color" content="rgba(33, 33, 33, 0.98)">
+<meta content="i play bedwars and also other things sometimes but not often
+        i love spreading positivity and making the world a better place. lets go on this journey together! :kiss:" property="og:description">
+<meta name="description" content="i play bedwars and also other things sometimes but not often first player to 1,000 stars and 100,000 final kills">
+<meta content="https://gamerboy80.com/assets/img/80avatar.png" property="og:image">
+</head>
+<body>
+<header>
+<img src="assets/img/gamerboy80.svg" alt>
+<div class="menu">
+<a href="https://www.reddit.com/r/gamerboy80" target="_blank">r/gamerboy80</a>
+<a href="https://www.youtube.com/c/gamerboy80/membership">Membership</a>
+</div>
+</header>
+<main>
+<section class="banner">
+<img src="assets/img/gamerboy80.webp" alt="Gamerboy80 Banner">
+</section>
+<section class="socialmedia">
+<div class="card">
+<div class="details">
+<h3>Twitter</h3>
+<h5>@gamerboy8O</h5>
+<p class="skeleton" id="twitter_subs"></p>
+<a href="https://twitter.com/gamerboy80" target="_blank"><button>Follow</button></a>
+</div>
+<div class="avatar">
+<img fetchpriority="high" rel="preload" src="assets/img/80avatar.png" alt="gamerboy80 Avatar">
+</div>
+</div>
+<div class="card">
+<div class="details">
+<h3>Youtube</h3>
+<h5>@gamerboy80</h5>
+<p class="skeleton" id="youtube_subs"></p>
+<a href="https://youtube.com/gamerboy80" target="_blank"><button style="background-color: #FF0000;">Subscribe</button></a>
+</div>
+<div class="avatar">
+<img src="assets/img/80avatar.png" alt="gamerboy80 Avatar">
+</div>
+</div>
+<div class="card" id="twitchcard">
+<div class="details">
+<h3>Twitch</h3>
+<h5>@gamerboy80twitch</h5>
+<p class="skeleton" id="twitch_subs"></p>
+<a href="https://www.twitch.tv/gamerboy80twitch" target="_blank"><button style="background-color: #9147FE;" id="twitchlive">Follow</button></a>
+</div>
+<div class="avatar">
+<img src="assets/img/80avatar.png" alt="gamerboy80 Avatar">
+</div>
+</div>
+</section>
+<section class="upsell">
+<div class="header">
+<h2>Recent Video</h2> <img src="assets/img/line.png" alt="Line">
+</div>
+<div class="content column">
+<div class="video">
+<div id="youtube_placeholder" class="yt_place">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+</svg>
+<img id="yt_placeholder" style="width: 500px;height: 280px;border-radius: 2%;" class="skeleton" alt>
+</div>
+<iframe style="display: none;" src id="youtube_embed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="details">
+<div class="views">
+<span id="youtube_viewcount">5000 views</span> - <span id="youtube_stamp">uploaded 2 hours
+ago</span>
+</div>
+</div>
+</div>
+</section>
+<section class="upsell" loading="lazy">
+<div class="header">
+<img style="transform: rotateY(180deg);" src="assets/img/line.png" alt>
+<h2>Cloaks</h2>
+</div>
+<div class="content">
+<div class="cape">
+<div class="img">
+<img src="assets/img/lightcloak.png" alt>
+</div>
+<div class="sell">
+<h4>Gamerboy80 Lightning</h4>
+<p>Cloak with a Lightning animation</p>
+<a href="https://store.lunarclient.com/category/gamerboy80" target="_blank"><button>Visit
+LunarStore</button></a>
+</div>
+</div>
+<div class="cape">
+<div class="img">
+<img src="assets/img/eyecloak.png" alt>
+</div>
+<div class="sell">
+<h4>Gamerboy80 Eyes</h4>
+<p>Gamerboy80s Red and Yellow blinking Eyes.</p>
+<a href="https://store.lunarclient.com/category/gamerboy80" target="_blank"><button>Visit
+LunarStore</button></a>
+</div>
+</div>
+</div>
+</section>
+<section class="download">
+<div class="title">
+<h2>GAMERBOY80 TEXTUREPACK</h2>
+</div>
+<div class="content">
+<div class="upseller">
+<h4>1.8 Short Sword Pack By TBNRnorton<br>
+36.4 MB • 21/8/2016</h4>
+<a href="http://bit.ly/ShortSwordd18"><button>Download</button></a>
+<a href="https://www.youtube.com/watch?v=9iOHHXFPsdQ&t=32s&ab_channel=AciDicBliTzz" target="_blank"><button id="link">CREDITS</button></a>
+</div>
+</div>
+</section>
+<footer>
+This Website is not Maintained by gamerboy80!<br> All Legal requests and claims may only be directed towards <a href="https://reggs.dev">reggs.dev</a>
+</footer>
+</main>
+<script async src="assets/js/update.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+header {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1em
+}
+
+.menu a,
+header .menu {
+    display: flex;
+    color: #fff;
+    opacity: .9;
+    text-decoration: none;
+    margin-left: 4rem
+}
+
+.menu img {
+    align-self: center;
+}
+
+.menu a:hover {
+    color: gray;
+    transition: .1s ease-in-out;
+}

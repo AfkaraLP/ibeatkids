@@ -1,0 +1,10 @@
+# example site block: static archive + live API behind the bend server
+# points at the default -addr of main.bend
+example.com:80 {
+	encode zstd gzip
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=86400"
+	@notassets not path /assets/*
+	header @notassets Cache-Control "no-cache"
+	reverse_proxy 127.0.0.1:16711
+}

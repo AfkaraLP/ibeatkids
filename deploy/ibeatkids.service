@@ -1,0 +1,20 @@
+[Unit]
+Description=ibeatkids (archived gamerboy80 fan site + live API, bend2)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# adjust these to your setup
+User=CHANGE_ME
+WorkingDirectory=/opt/ibeatkids
+# bend shells out to curl and sh, so they need to be on the PATH too
+Environment=PATH=/home/CHANGE_ME/.bend/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/home/CHANGE_ME/.bend/bin/bend main.bend -- -addr 127.0.0.1:16711
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
