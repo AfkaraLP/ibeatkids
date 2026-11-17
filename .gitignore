@@ -2,3 +2,4 @@ ibeatkids-server
 /data/
 results/
 result
+heaptrack.*

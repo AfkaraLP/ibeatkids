@@ -38,15 +38,21 @@
           patchelf --set-rpath ${pkgs.glibc}/lib $out/bin/bend
         '';
       };
+      # `bend main.bend` from the repo root; curl and sh are runtime deps
+      # (src/fetch.bend shells out to them for HTTPS). For memory checks skip
+      # LD_PRELOAD profilers: the bundled Bun runtime carves arenas outside
+      # glibc malloc, so heaptrack only sees the glibc sliver. Read the truth
+      # instead: awk '/VmRSS|VmHWM/{print}' /proc/$(pgrep -f main.bend)/status
+      #
+      # `bend main.bend -o ibeatkids` compiles a standalone native binary
+      # (needs clang); it replaces the ~1 GiB bundled Bun runner with a
+      # clang-linked ELF.
     in
     {
-      # `bend main.bend` from the repo root; curl and sh are runtime deps
-      # (src/fetch.bend shells out to them for HTTPS).
       devShell.${system} = pkgs.mkShell {
         buildInputs = [ bend ];
-        nativeBuildInputs = [ pkgs.curl ];
+        nativeBuildInputs = [ pkgs.curl pkgs.clang ];
       };
-
       packages.${system} = {
         inherit bend;
         default = bend;
